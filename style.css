@@ -1,0 +1,299 @@
+:root {
+  --darkPurple: hsl(300, 43%, 22%);
+  --pink: hsl(333, 80%, 67%);
+  --darkGray: hsl(303, 10%, 53%);
+  --lightGray: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  font-size: 1.8rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: 8.2rem 2.4rem 9.9rem;
+}
+
+/*** mobile bg img ***/
+.topMobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bottomMobile {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/*** desktop bg img  ***/
+.topDesktop {
+  display: none;
+}
+.bottomDesktop {
+  display: none;
+}
+
+/******** topSection  ********/
+
+.topSection {
+  margin-bottom: 4.9rem;
+  text-align: center;
+}
+/*** topSection Text  ***/
+
+.topSectionText > h1 {
+  margin-bottom: 1.7rem;
+
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 32px;
+
+  color: var(--darkPurple);
+}
+
+.topSectionText > p {
+  margin-bottom: 3.9rem;
+
+  font-weight: 500;
+  font-size: 1.9rem;
+  line-height: 25px;
+
+  color: var(--darkGray);
+}
+
+/*** starSection  ***/
+.starContainer {
+  margin-bottom: 1.6rem;
+  padding: 1.6rem 0 1.5rem 0;
+  background-color: var(--lightGray);
+  border-radius: 8px;
+}
+
+.fiveStars {
+  margin-bottom: 1.5rem;
+}
+
+.starContainer > p {
+  font-weight: 700;
+  font-size: 1.7rem;
+
+  color: var(--darkPurple);
+}
+
+/******** bottomSection  ********/
+
+.bottomSection {
+  text-align: left;
+}
+/*** reviewSection  ***/
+.reviewContainer {
+  margin-bottom: 1.6rem;
+  padding: 4rem 3.2rem 3.5rem;
+
+  background-color: var(--darkPurple);
+  border-radius: 8px;
+}
+
+.reviewTop {
+  margin-bottom: 2.4rem;
+
+  display: flex;
+  align-items: center;
+  gap: 2.3rem;
+}
+
+.reviewTop > img {
+  width: 4rem;
+  border-radius: 50px;
+}
+
+.reviewTop > .rightSide {
+  font-weight: 700;
+  font-size: 1.7rem;
+
+  color: var(--white);
+}
+
+.reviewTop > .rightSide > span {
+  font-weight: 400;
+  color: var(--pink);
+}
+
+.reviewBottom > p {
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 22px;
+
+  color: var(--white);
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 150rem;
+    padding: 11.8rem 16.5rem 10rem;
+  }
+
+  /*** mobile bg img ***/
+  .topMobile {
+    display: none;
+  }
+  .bottomMobile {
+    display: none;
+  }
+
+  /*** desktop bg img  ***/
+  .topDesktop {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .bottomDesktop {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  /******** topSection  ********/
+
+  .topSection {
+    margin-bottom: 7.1rem;
+    text-align: left;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 12.5rem;
+  }
+  /*** topSection Text  ***/
+
+  .topSectionText > h1 {
+    margin-bottom: 1.6rem;
+
+    font-size: 5.6rem;
+    line-height: 48px;
+  }
+
+  /*** starSection  ***/
+
+  .starSection {
+    display: grid;
+    grid-template-columns: repeat(12, 4.5rem);
+    grid-template-rows: repeat(3, 5.6rem);
+    row-gap: 1.6rem;
+  }
+
+  .firstStar {
+    grid-column: 1 / span 10;
+    grid-row: 1;
+  }
+  .secondStar {
+    grid-column: 2 / span 10;
+    grid-row: 2;
+  }
+  .thirdStar {
+    grid-column: 3 / span 10;
+    grid-row: 3;
+  }
+
+  .starContainer {
+    margin-bottom: 0;
+    padding-left: 3.2rem;
+
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
+  .fiveStars {
+    margin-bottom: 0;
+  }
+
+  .starContainer > p {
+    font-weight: 700;
+    font-size: 1.7rem;
+
+    color: var(--darkPurple);
+  }
+
+  /******** bottomSection  ********/
+
+  .reviewSection {
+    height: 26.6rem;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reviewOne {
+    align-self: flex-start;
+  }
+  .reviewTwo {
+    align-self: center;
+  }
+  .reviewThree {
+    align-self: flex-end;
+  }
+
+  /*** reviewSection  ***/
+  .reviewContainer {
+    margin-bottom: 0;
+    padding: 4rem 3.2rem 3.5rem;
+    width: 35rem;
+    height: 23.4rem;
+
+    background-color: var(--darkPurple);
+    border-radius: 8px;
+  }
+
+  .reviewTop {
+    margin-bottom: 2.4rem;
+
+    display: flex;
+    align-items: center;
+    gap: 2.3rem;
+  }
+
+  .reviewTop > img {
+    width: 4rem;
+    border-radius: 50px;
+  }
+
+  .reviewTop > .rightSide {
+    font-weight: 700;
+    font-size: 1.7rem;
+
+    color: var(--white);
+  }
+
+  .reviewTop > .rightSide > span {
+    font-weight: 400;
+    color: var(--pink);
+  }
+
+  .reviewBottom > p {
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 22px;
+
+    color: var(--white);
+  }
+}
